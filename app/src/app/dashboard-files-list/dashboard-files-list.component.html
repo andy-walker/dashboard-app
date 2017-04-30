@@ -1,0 +1,19 @@
+<h2>Latest Content</h2>
+
+<div class="component-body">
+  
+  <span class="filters">
+    <a (click)="filterResults()">My content</a>
+    <a (click)="filterResults()">All</a>
+    <a (click)="filterResults({ status: 'Published' })">Published</a>
+  </span>
+
+  <app-dashboard-files-list-item
+    *ngFor="let file of files" 
+    [file]="file"
+    [ngClass]="{ visible: expanded }"
+  ></app-dashboard-files-list-item>
+
+  <button *ngIf="!expanded" (click)="expanded=true" type="button" class="btn btn-primary btn-block">View all content</button>
+
+</div>

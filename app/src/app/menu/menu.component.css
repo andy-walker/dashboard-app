@@ -1,0 +1,25 @@
+/* styling for main menu component */
+.primary-menu {
+    background:#4284cc;
+    padding-top:6px;
+    padding-bottom:7px;
+}
+
+#isite-search-form {
+    position:relative;
+}
+
+i {
+    position:absolute;
+    right: 0.75rem;
+    top: 0.45rem;
+    font-size: 1rem;
+    color:#fff;
+}
+
+#isite-search-form input {
+    background:#7ba7d6;
+    color:#dce6f3;
+    padding: .3rem 2.2rem .25rem .5rem;
+    font-weight: 300;
+}

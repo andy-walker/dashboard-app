@@ -1,0 +1,37 @@
+/* Styles for 500 error page */
+.error-page {
+	background-image:url('../../assets/images/clown.png');
+	background-position:top right;
+	background-repeat:no-repeat;
+	padding-right:150px;
+}
+
+.error-page h1 {
+	font-size:1.5rem;
+	line-height:1.4;
+}
+
+.error-page .help {
+	padding:.5rem 0;
+	text-align:left;
+}
+
+.error-page .help ul {
+	margin-top:.5rem;
+}
+
+/* Re-organize layout slightly on smaller devices */
+@media (max-width:550px) {
+	
+	.error-page {
+		background-position:top center;
+		padding-top:140px;
+		padding-right:0;
+		text-align:center;
+	}
+
+	.error-page .help strong {
+		padding-left:22px;
+	}
+
+}

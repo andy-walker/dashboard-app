@@ -1,0 +1,30 @@
+<a href="#">
+  
+  <h6>{{file.title}}</h6>
+  
+  <div class="file-details">
+    
+    <span class="icon">
+      <i *ngIf="file.status === 'In progress'" class="fa fa-circle-o"></i>
+      <i *ngIf="file.status === 'Approved'" class="fa fa-check"></i>
+      <i *ngIf="file.status === 'For review'" class="fa fa-comments"></i>
+      <i *ngIf="file.status === 'Scheduled'" class="fa fa-clock-o"></i>
+      <i *ngIf="file.status === 'Published'" class="fa fa-circle"></i>
+    </span>
+    
+    <span class="wrapper">
+      
+      <strong class="filetype">{{ file.type }}</strong> 
+      
+      modified by
+      
+      <strong>{{ file.modifiedByName }}</strong> on <strong> {{ moment(file.modifiedDateTime).format('Do MMM YYYY') }}</strong>
+      <span class="em-dash">-</span> 
+    
+    </span>
+
+    <span class="wrapper">{{ file.status }}</span>
+  
+  </div>
+
+</a>

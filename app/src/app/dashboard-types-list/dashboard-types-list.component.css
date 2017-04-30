@@ -1,0 +1,14 @@
+.file-types-list {
+    padding-left:0;
+}
+
+.file-types-list li {
+    padding: .2rem 0 .2rem .75rem;
+    border-top: 2px solid #e8e8e8;
+    list-style-position: inside;
+    font-size: .82rem;
+}
+
+.file-types-list li a {
+    font-size:.9rem;
+}

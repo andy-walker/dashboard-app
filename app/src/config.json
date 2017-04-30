@@ -1,0 +1,13 @@
+{
+	"datasource": {
+		"endpoints": {
+			"files": "http://localhost:3001/files",
+			"users": "http://localhost:3001/users",
+			"types": "http://localhost:3001/types"
+		}
+	},
+
+	"timeout":    10,
+	"maxRetries": 3
+
+}

@@ -1,0 +1,15 @@
+/* Styles for dashboard header component */
+.dashboard-header {
+    padding-bottom:1.6rem;
+}
+
+.dashboard-header h1 {
+    font-size: 1.1rem;
+    padding-top:0.45rem;
+    padding-bottom:0.2rem;
+}
+
+.dashboard-header img {
+    float:left;
+    margin-right: 1.15rem;
+}

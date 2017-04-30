@@ -1,0 +1,43 @@
+a {
+    padding: .74rem 0;
+    color: #366da9;
+    display: block;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+i {
+    color: #4e4e4e;
+    font-size: .6rem;
+    padding-right: 0.37rem;
+    padding-left: 0.06rem;
+    font-weight: 600;
+    margin-top: 4px;
+    float: left;
+}
+
+a:hover, a:active, a:focus {
+    text-decoration:none !important;
+}
+
+h6 {
+    font-weight:600;
+    margin-bottom:.2rem;
+}
+
+.file-details {
+    color:#000;
+}
+
+.filetype {
+    text-transform: capitalize;
+}
+
+/* Adjust layout slightly for small devices */
+@media (max-width:500px) {
+    span {
+        display:block;
+    }
+    .em-dash {
+        display:none;
+    }
+}

@@ -1,0 +1,31 @@
+<!-- MenuComponent - global component that can be re-used on multiple pages -->
+<app-menu></app-menu>
+
+<section class="main-content container">
+  
+  <!-- 
+    Loader component - displays a loading indicator while ajax requests are pending.
+    Can be re-used on multiple pages.
+  -->
+  <app-loading [ngClass]="{ quickFadeOut: !isLoading }"></app-loading>
+  
+  <!-- 
+    DashboardComponent - component encapsulating dashboard functionality.
+    Future pages could be implemented in a similar way, perhaps using HTML5 routing
+  -->
+  <app-dashboard
+    class="section-container"
+    [hidden]="isLoading || isError"
+    [config]="config" 
+    (pageLoaded)="onPageLoaded($event)"
+    (pageError)="onPageError($event)"
+    [ngClass]="{ fadeIn: !isLoading && !isError }"
+  ></app-dashboard>
+
+  <!--
+    Error component - displays an error page in the case of a 500 error.
+    Can be re-used on multiple pages.
+  -->
+  <app-error-500 [hidden]="!isError" [ngClass]="{ fadeIn: isError }"></app-error-500>
+
+</section>
