@@ -1,6 +1,6 @@
 Dashboard App
 =============
-A developer competency test to implement a basic user dashboard for a CMS. Frontend code is written in Typescript using Angular 2, webpack to compile and deploy. Also includes a basic set of unit and e2e tests.
+A developer competency test to implement a basic user dashboard for a CMS. Frontend code is written in Typescript using Angular 2, and webpack to compile and deploy. Also includes a basic set of unit and e2e tests.
 
 Installation
 ------------
