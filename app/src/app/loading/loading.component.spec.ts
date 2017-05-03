@@ -22,7 +22,7 @@ describe('LoadingComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should successfully create the component', () => {
     expect(component).toBeTruthy();
   });
 });

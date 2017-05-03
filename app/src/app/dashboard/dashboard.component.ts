@@ -26,6 +26,8 @@ export class DashboardComponent implements OnInit {
     public types: Type[] = [];
     public files: File[] = [];
 
+    private attempts:number = 0;
+
     constructor(private remoteDataService: RemoteDataService) { }
 
     ngOnInit() {
@@ -39,6 +41,8 @@ export class DashboardComponent implements OnInit {
             datasource.getData(endpoints.types),
             datasource.getData(endpoints.files)
         ];
+
+        this.attempts++;
 
         // when they've all come back ..
         Observable.forkJoin(jobs).subscribe(
@@ -82,9 +86,24 @@ export class DashboardComponent implements OnInit {
             
             // if there was an error ..
             error => {
-                // emit a pageError event, to signal to the application
+
+                // try again if configured to retry if a 500 error received
+                if ('retryOnError' in this.config && this.config.retryOnError) {
+                    
+                    let maxAttempts = 'maxAttempts' in this.config ? this.config.maxAttempts : 3;
+
+                    if (this.attempts < maxAttempts)
+                        this.ngOnInit();
+                    else
+                        // finally display an error page if we've exceeded the maximum 
+                        // number of attempts allowed
+                        this.pageError.emit(error.status);
+
+                // otherwise emit a pageError event, to signal to the application
                 // to display an error page
-                this.pageError.emit(error.status);
+                } else {
+                    this.pageError.emit(error.status);
+                }
             }
 
         );

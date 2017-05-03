@@ -2,18 +2,18 @@
 
 <div class="component-body">
   
-  <span class="filters">
-    <a (click)="filterResults()">My content</a>
-    <a (click)="filterResults()">All</a>
-    <a (click)="filterResults({ status: 'Published' })">Published</a>
-  </span>
+  <div class="filters">
+    <a id="filter-my-content" href="javascript:void(0)" (click)="filterResults(); setActive('my-content')" [ngClass]="{ active: activeSection == 'my-content' }">My content</a>
+    <a id="filter-all" href="javascript:void(0)" (click)="filterResults(); setActive('all')" [ngClass]="{ active: activeSection == 'all' }">All</a>
+    <a id="filter-published" href="javascript:void(0)" (click)="filterResults({ status: 'Published' }); setActive('published')" [ngClass]="{ active: activeSection == 'published' }">Published</a>
+  </div>
 
   <app-dashboard-files-list-item
-    *ngFor="let file of files" 
+    *ngFor="let file of results" 
     [file]="file"
     [ngClass]="{ visible: expanded }"
   ></app-dashboard-files-list-item>
 
-  <button *ngIf="!expanded" (click)="expanded=true" type="button" class="btn btn-primary btn-block">View all content</button>
+  <button *ngIf="!expanded && results.length > 5" (click)="expanded=true" type="button" class="btn btn-primary btn-block">View all content</button>
 
 </div>

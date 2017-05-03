@@ -20,7 +20,7 @@ describe('AppComponent', () => {
   }));
 */
 /*
-  it(`should have as title 'app works!'`, async(() => {
+  it(`should have as title 'iSite Dashboard'`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('iSite Dashboard');

@@ -1,7 +1,7 @@
 <!-- DashboardHeaderComponent - displays overview of info about the project -->
-<app-dashboard-header [users]="users"></app-dashboard-header>
+<app-dashboard-header [users]="users" *ngIf="users.length"></app-dashboard-header>
 
 <div class="dashboard-content row">
-  <app-dashboard-files-list class="col-md-8" [users]="users" [files]="files"></app-dashboard-files-list>
-  <app-dashboard-types-list class="side-feature col-md-4" [types]="types"></app-dashboard-types-list>
+  <app-dashboard-files-list class="col-md-8" [users]="users" [files]="files" *ngIf="files.length && users.length"></app-dashboard-files-list>
+  <app-dashboard-types-list class="side-feature col-md-4" [types]="types" *ngIf="types.length"></app-dashboard-types-list>
 </div>

@@ -1,3 +1,18 @@
+.filters {
+    padding-bottom: .75rem;
+}
+
+.filters a {
+    font-size:.8rem;
+    display:inline-block;
+    margin-right:.7rem;
+}
+
+.filters a.active {
+    font-weight:600;
+    text-decoration:underline;
+}
+
 app-dashboard-files-list-item {
     display:none;
 }

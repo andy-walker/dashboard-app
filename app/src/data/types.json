@@ -1,0 +1,18 @@
+[
+  {
+    "creationDateTime": "2016-08-17T13:07:19.800Z",
+    "id": "article",
+    "documentsCount": 5,
+    "description": "Articles about the programme",
+    "name": "Article Page",
+    "colourId": "golden"
+  },
+  {
+    "creationDateTime": "2016-08-13T15:00:44.200Z",
+    "id": "profile",
+    "documentsCount": 6,
+    "description": "Actor/Actress profiles",
+    "name": "Profile Page",
+    "colourId": "spray"
+  }
+]

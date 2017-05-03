@@ -9,7 +9,7 @@ body {
 }
 
 a, a:hover, a:active {
-    color:#3797da;
+    color: #398eca;
     font-weight:400;
 }
 
@@ -34,4 +34,18 @@ a, a:hover, a:active {
 
 .main-content .side-feature .component-body {
     padding:0;
+}
+
+/* Adjust default container width to match design */
+@media (min-width: 1200px) {
+    .container {
+        width: 1015px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        margin-left:0;
+        margin-right:0;
+    }
 }
