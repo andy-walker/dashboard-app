@@ -1,6 +1,6 @@
-Competency Test
-==============
-A developer competency test to implement a basic user dashboard for a CMS. Frontend code is written in Typescript using Angular 2, and webpack to compile and deploy. Also includes a basic set of unit and e2e tests.
+Dashboard App
+=============
+A developer competency test to implement a basic user dashboard for a CMS. Frontend code is written in Typescript using Angular 2, webpack to compile and deploy. Also includes a basic set of unit and e2e tests.
 
 Installation
 ------------
@@ -34,11 +34,11 @@ http://localhost:4200
 
 Overview
 --------
-The application should implement all the features displayed in the example graphic, and works as I thought it should probably work, from the information provided - however, apologies if I have misinterpreted the information slightly.
+The application should implement all the features displayed in the example graphic, and works as I determined it should probably work from the information provided - however, apologies if I have misinterpreted the brief in any way.
 
 It uses a component-based architecture, the dashboard header, file types and files list all being subcomponents of a larger dashboard component, which is itself a subcomponent of the main application component - this should easily allow further components / subcomponents to be added to implement new routes / features in future.
 
-It has some basic configuration values for api endpoints, number of times to retry a failed request etc, which are located in app/src/config.json. The application will display a 500 error page if configured to not retry failed requests, or if the maximum number of retries has been exceeded.
+It has some basic configuration values for api endpoints, number of times to retry a failed request etc, which are located in app/src/config.json. The application will display a 500 error page if configured not to retry failed requests, or if the maximum number of retries has been exceeded.
 
 Source code
 -----------
